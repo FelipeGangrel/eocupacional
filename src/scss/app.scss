@@ -159,6 +159,10 @@ section#intro{
 section#recursos{
   padding: 50px 0;
   background-color: $claro_2;
+  background-image: url('../../img/recursos-bg.jpg');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
   @include breakpoint(sm){
     padding: 100px 0;
   }
