@@ -16,6 +16,11 @@ $(document).ready(()=>{
       event.preventDefault();
   });
 
+  $('[menu-toggle]').on('click', function(event){
+    console.log('clicou');
+    $('section#navbar .menu').toggleClass('toggle');
+    $(this).toggleClass('toggle');
+  });
   
   let posicaoLimiar = $('#sub-start').offset().top;
 

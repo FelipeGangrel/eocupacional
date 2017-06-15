@@ -65,6 +65,31 @@ section#navbar{
           }
         }
       }
+      @include breakpoint(xs){
+        position: fixed;
+        right: -300px;
+        top: 0;
+        width: 200px;
+        height: 100vh;
+        background-color: #fafafa;
+        box-shadow: -2px 0px 10px 2px rgba(#333, .1);
+        transition: all .5s ease-in-out;
+        padding-top: 20px;
+        ul{
+          display: flex;
+          flex-direction: column;
+          li{
+            display: block;
+            padding: 5px 20px;
+            a.registre-se{
+              width: 100%;
+            }
+          }
+        }
+        &.toggle{
+          right: 0;
+        }
+      }
     }
     .logo{
       width: 85px;
@@ -77,6 +102,26 @@ section#navbar{
         background-position: center center;
         background-repeat: no-repeat;
       }
+    }
+  }
+  .menu-toggle{
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    top: 0;
+    right: -50px;
+    color: $azul_2;
+    transition: all .5s ease-in-out;
+    @include breakpoint(xs){
+      right: 0;
+    }
+    &.toggle{
+      right: 200px;
     }
   }
 }
